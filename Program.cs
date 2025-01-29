@@ -1,10 +1,32 @@
-﻿//Okay this main file is the "Driver" class.
-
-using System.ComponentModel;
+using System.Runtime.InteropServices;
 using Mission_4_Group_3_13;
 
-char[] gameArray = ['1','2','X','4','5','O','7','8','9'];
+Class1 c1 = new Class1();
 
-Class1 pb = new Class1();
+Console.WriteLine("Welcome to the game");
 
-pb.PrintBoard(gameArray);
+char[] boardArray = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+
+for (int i = 0; i < 11; i++)
+{
+    if (i < 9)
+    {
+        c1.PrintBoard(boardArray[]);
+        
+        Console.WriteLine("Player 1 please enter a number");
+        int number1 = Convert.ToInt16(Console.ReadLine());
+        
+        boardArray[number1 - 1] = 'X';
+        
+        c1.PrintBoard(boardArray[]);
+        Console.WriteLine("Player 2 please enter a number");
+        int number2 = Convert.ToInt16(Console.ReadLine());
+        
+        boardArray[number2 - 1] = 'O';
+    }
+    else if (i == 9)
+    {
+        Console.WriteLine("It's a tie! Game over");
+    }
+    
+}
