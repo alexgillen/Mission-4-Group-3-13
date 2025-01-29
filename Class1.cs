@@ -1,4 +1,6 @@
-﻿namespace Mission_4_Group_3_13
+﻿using System.ComponentModel;
+
+namespace Mission_4_Group_3_13
 {
     //This file will be the supporting class
 
@@ -19,7 +21,7 @@
 
     internal class Class1
     {
-        public void PrintBoard(char[] ga)
+        public bool PrintBoard(char[] ga)
         {
             bool gameOver = false;
 
@@ -30,55 +32,46 @@
 
             if (ga[0] == ga[1] && ga[1] == ga[2])
             {
-
+                Console.WriteLine($"{ga[1]}s win! ");
+                gameOver = true;
             }
             else if (ga[3] == ga[4] && ga[4] == ga[5])
             {
-
+                Console.WriteLine($"{ga[3]}s win! ");
+                gameOver = true;
             }
             else if (ga[6] == ga[7] && ga[7] == ga[8])
             {
-
+                Console.WriteLine($"{ga[6]}s win! ");
+                gameOver = true;
             }
             else if (ga[0] == ga[3] && ga[3] == ga[6])
             {
-
+                Console.WriteLine($"{ga[0]}s win! ");
+                gameOver = true;
             }
             else if (ga[1] == ga[4] && ga[4] == ga[7])
             {
-
+                Console.WriteLine($"{ga[1]}s win! ");
+                gameOver = true;
             }
             else if (ga[2] == ga[5] && ga[5] == ga[8])
             {
-
+                Console.WriteLine($"{ga[2]}s win! ");
+                gameOver = true;
             }
             else if (ga[0] == ga[4] && ga[4] == ga[8])
             {
-
+                Console.WriteLine($"{ga[0]}s win! ");
+                gameOver = true;
             }
             else if (ga[6] == ga[4] && ga[4] == ga[2])
             {
-
+                Console.WriteLine($"{ga[6]}s win! ");
+                gameOver = true;
             }
 
-            array.contains = [1,2,3]
-
-
-
-            else
-            {
-                for (int i = 0; i < ga.Length; i++)
-                { 
-                    if (ga[i] != 'X' || ga[i] != 'O')
-                    {
-                        //Leave the loop because there isn't a tie
-                        Console.WriteLine("It's not a tie");
-                    }
-                }
-
-                // For sure a tie
-                Console.WriteLine("It's a tie");
-            }
+            return gameOver;
         }
 
         //- - -
